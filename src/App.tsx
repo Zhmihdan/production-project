@@ -3,12 +3,13 @@ import { Routes, Route, Link } from "react-router-dom";
 import { MainPageAsync } from "./pages/MainPage/MainPage.async";
 import { AboutPageAsync } from "./pages/AboutPage/AboutPage.async";
 import { useTheme } from "./theme/useTheme";
+import { classNames } from "./helpers/classNames/classNames";
 
 const App: FC = () => {
 	const {theme, toggleTheme} = useTheme();
 
 	return (
-		<div className={`app ${theme}`}>
+		<div className={classNames('app', {}, [theme])}>
 			<button onClick={toggleTheme}>Сменить тему</button>
 			<Link to={'/'}>Главная страница</Link>
 			<Link to={'/about'}>о сайте</Link>
