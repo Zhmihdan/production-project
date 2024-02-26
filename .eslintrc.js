@@ -7,6 +7,7 @@ module.exports = {
 		"eslint:recommended",
 		"plugin:@typescript-eslint/recommended",
 		"plugin:react/recommended",
+		"plugin:i18next/recommended",
 		"airbnb"
 	],
 	"overrides": [
@@ -29,7 +30,8 @@ module.exports = {
 	},
 	"plugins": [
 		"@typescript-eslint",
-		"react"
+		"react",
+		"i18next"
 	],
 	"rules": {
 		"indent": ["error", "tab"],
@@ -59,7 +61,8 @@ module.exports = {
 		"import/newline-after-import": "off",
 		"react/jsx-indent-props": [2, "tab"],
 		"no-underscore-dangle": "off",
-		"react/jsx-max-props-per-line": "off"
+		"react/jsx-max-props-per-line": "off",
+		"i18next/no-literal-string": [2, { markupOnly: true }]
 	},
 	"globals": {
 		"__IS_DEV__": true
