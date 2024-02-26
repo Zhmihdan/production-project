@@ -4,13 +4,13 @@ import { useTheme } from "app/providers/ThemeProvider";
 import AppRouter from "app/providers/router/AppRouter";
 import { Navbar } from "widgets";
 import { Sidebar } from "widgets/Sidebar";
-import 'shared/config/i18n/i18n';
+import "shared/config/i18n/i18n";
 
 const App: FC = () => {
 	const { theme } = useTheme();
 
 	return (
-		<div className={classNames('app', {}, [theme])}>
+		<div className={classNames("app", {}, [theme])}>
 			<Suspense fallback="">
 				<Navbar />
 				<div className="page-content">
@@ -19,7 +19,7 @@ const App: FC = () => {
 				</div>
 			</Suspense>
 		</div>
-	)
-}
+	);
+};
 
 export default App;

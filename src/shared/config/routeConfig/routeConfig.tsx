@@ -4,8 +4,8 @@ import { ReactElement } from "react";
 import { RouteProps } from "react-router-dom";
 
 export enum RoutePaths {
-	MAIN = '/',
-	ABOUT = '/about'
+	MAIN = "/",
+	ABOUT = "/about"
 }
 
 interface Route extends RouteProps {
@@ -14,6 +14,6 @@ interface Route extends RouteProps {
 }
 
 export const routeConfig: Route[] = [
-	{path: RoutePaths.MAIN, element: <MainPage/>},
-	{path: RoutePaths.ABOUT, element: <AboutPage />}
-]
+	{ path: RoutePaths.MAIN, element: <MainPage /> },
+	{ path: RoutePaths.ABOUT, element: <AboutPage /> }
+];

@@ -1,9 +1,9 @@
-export type BuildMode = Mode.PRODUCTION | Mode.DEVELOPMENT;
-
 export enum Mode {
-	PRODUCTION = 'production',
-	DEVELOPMENT = 'development'
+	PRODUCTION = "production",
+	DEVELOPMENT = "development"
 }
+
+export type BuildMode = Mode.PRODUCTION | Mode.DEVELOPMENT;
 
 export interface BuildEnv {
 	port: number;

@@ -1,15 +1,15 @@
 import path from "path";
+import { Configuration } from "webpack";
 import setupConfig from "./config/build/setupConfig";
 import { BuildEnv, BuildPaths, Mode } from "./config/build/types/config";
-import { Configuration } from "webpack";
 
 export default (env: BuildEnv) => {
 	const paths: BuildPaths = {
-		entry: path.resolve(__dirname, 'src', 'index.tsx'),
-		build: path.resolve(__dirname, 'build'),
-		html: path.resolve(__dirname, 'public', 'index.html'),
-		src: path.resolve(__dirname, 'src')
-	}
+		entry: path.resolve(__dirname, "src", "index.tsx"),
+		build: path.resolve(__dirname, "build"),
+		html: path.resolve(__dirname, "public", "index.html"),
+		src: path.resolve(__dirname, "src"),
+	};
 
 	const mode = env.mode || Mode.DEVELOPMENT;
 	const PORT = env.port || 3000;
@@ -20,7 +20,7 @@ export default (env: BuildEnv) => {
 		port: PORT,
 		mode,
 		isDev,
-		paths
+		paths,
 	});
 
 	return config;

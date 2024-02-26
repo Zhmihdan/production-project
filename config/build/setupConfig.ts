@@ -6,14 +6,14 @@ import buildResolvers from "./buildResolvers";
 import buildDevServer from "./buildDevServer";
 
 export default function setupConfig(options: BuildOptions): Configuration {
-	const {mode, paths, isDev} = options;
+	const { mode, paths, isDev } = options;
 
 	return {
-		mode: mode,
+		mode,
 		entry: paths.entry,
 		output: {
 			path: paths.build,
-			filename: '[name].[contenthash].js',
+			filename: "[name].[contenthash].js",
 			clean: true
 		},
 		module: {
@@ -21,7 +21,7 @@ export default function setupConfig(options: BuildOptions): Configuration {
 		},
 		resolve: buildResolvers(options),
 		plugins: buildPlugins(options),
-		devtool: isDev ? 'inline-source-map' : undefined,
+		devtool: isDev ? "inline-source-map" : undefined,
 		devServer: isDev ? buildDevServer(options) : undefined
-	}
+	};
 }
