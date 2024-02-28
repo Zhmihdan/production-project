@@ -63,7 +63,8 @@ module.exports = {
 		"react/jsx-indent-props": [2, "tab"],
 		"no-underscore-dangle": "off",
 		"react/jsx-max-props-per-line": "off",
-		"i18next/no-literal-string": [2, { markupOnly: true }]
+		"i18next/no-literal-string": [2, { markupOnly: true }],
+		"ban-ts-comment": "off"
 	},
 	"globals": {
 		"__IS_DEV__": true
