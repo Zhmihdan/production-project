@@ -49,7 +49,7 @@ module.exports = {
 		"react/jsx-indent": [2, "tab"],
 		"import/extensions": "off",
 		"no-unused-vars": "warn",
-		"import/no-extraneous-dependencies": ["error", { "devDependencies": true, "optionalDependencies": false, "peerDependencies": false }],
+		"import/no-extraneous-dependencies": "off",
 		"eol-last": "off",
 		"react/require-default-props": "off",
 		"react/function-component-definition": "off",
@@ -63,7 +63,7 @@ module.exports = {
 		"react/jsx-indent-props": [2, "tab"],
 		"no-underscore-dangle": "off",
 		"react/jsx-max-props-per-line": "off",
-		"i18next/no-literal-string": [2, { markupOnly: true }],
+		"i18next/no-literal-string": [2, { markupOnly: true, ignoreAttribute: ["data-testid"] }],
 		"ban-ts-comment": "off"
 	},
 	"globals": {

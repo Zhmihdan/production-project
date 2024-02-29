@@ -1,3 +1,5 @@
+import path from "path";
+
 const config = {
 	// All imported modules in your tests should be mocked automatically
 	// automock: false,
@@ -31,7 +33,13 @@ const config = {
 	testMatch: [
 		"<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)"
 	],
-	verbose: true
+	modulePaths: ["<rootDir>/src"],
+	setupFilesAfterEnv: ["<rootDir>/config/jest/setupTests.ts"],
+	verbose: true,
+	moduleNameMapper: {
+		"\\.(css|scss)$": "identity-obj-proxy",
+		"\\.svg": path.resolve(__dirname, "jestEmptyComponent.tsx"),
+	}
 
 	// Indicates whether the coverage information should be collected while executing the test
 	// collectCoverage: false,

@@ -1,5 +1,5 @@
 {
-	"include": ["./src/**/*.tsx", "./src/**/*.ts", "src/jest.config.ts"],
+	"include": ["./src/**/*.tsx", "./src/**/*.ts", "src/jest.config.ts", "./config/jest/setupTests.ts"],
   "compilerOptions": {
     "outDir": "./dist/",
     "noImplicitAny": true,
